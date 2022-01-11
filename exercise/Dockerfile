@@ -14,6 +14,6 @@ COPY ./requirements.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-COPY exercise.py .
+COPY exercise.py /app/exercise.py
 
 CMD [ "python", "exercise.py" ]

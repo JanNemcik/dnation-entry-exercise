@@ -7,7 +7,17 @@ spec:
     spec:
       containers:
       - name: exercise
-        image: perl
+        image: jany15/dnation-entry-exercise
         command: ["python", "exercise.py"]
+        volumeMounts:
+        - name: matrix-volume
+          mountPath: /app
       restartPolicy: Never
+      volumes:
+      - name: matrix-volume
+        configMap:
+          name: exercise
+          items:
+          - key: matrix.txt
+            path: matrix.txt
   backoffLimit: 4
