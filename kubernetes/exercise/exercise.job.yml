@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: exercise
+spec:
+  template:
+    spec:
+      containers:
+      - name: exercise
+        image: perl
+        command: ["python", "exercise.py"]
+      restartPolicy: Never
+  backoffLimit: 4
