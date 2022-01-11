@@ -11,7 +11,8 @@ spec:
         command: ["python", "exercise.py"]
         volumeMounts:
         - name: matrix-volume
-          mountPath: /app
+          mountPath: /app/matrix.txt
+          subPath: matrix.txt
       restartPolicy: Never
       volumes:
       - name: matrix-volume
