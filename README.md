@@ -39,8 +39,5 @@ kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin
 
 ### hetzner csi driver
 
-- dir: *provision*
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/hetznercloud/csi-driver/v1.5.1/deploy/kubernetes/hcloud-csi.yml
-```
+- dir: *kubernetes/csi-verify*
+- ref: https://github.com/hetznercloud/csi-driver/blob/master/README.md#versioning-policy
